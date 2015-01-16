@@ -24,8 +24,8 @@ RUN sudo apt-get install -y python-distribute python-pip python-dev
 # Install Postgres dependencies
 RUN sudo apt-get install -y postgresql libpq-dev
 
-# Deploy from our git repository
-RUN git clone https://github.com/smartercleanup/duwamish.git && cd duwamish && git checkout docker-deploy && cd -
+# If you want to deploy from an online host git repository, you can use the following command to clone:
+RUN git clone https://github.com/smartercleanup/duwamish.git && cd duwamish && git checkout docker-deploy-dev && cd -
 
 # Install pip requirements
 RUN pip install -r /duwamish/requirements.txt

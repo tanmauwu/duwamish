@@ -20,6 +20,7 @@ DATABASES = {
 }
 
 ALLOWED_HOSTS = ['*']
+USE_X_FORWARDED_HOST = True
 
 # How long to keep api cache values. Since the api will invalidate the cache
 # automatically when appropriate, this can (and should) be set to something
